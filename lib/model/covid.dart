@@ -11,33 +11,33 @@ class Covid{
     country = json['country'];
     timeline = json['timeline'] != null ? Timeline.fromJson(json['timeline']) : null;
   }
-  Map<String , dynamic> toJson() {
-final Map<String, dynamic> data = Map<String , dynamic> ();
+//   Map<String , dynamic> toJson() {
+// final Map<String, dynamic> data = Map<String , dynamic> ();
 
-data['country'] = country;
-if(timeline != null) {
-  data['timeline'] = timeline!.toJson();
-}
-return data;
-  }
+// data['country'] = country;
+// if(timeline != null) {
+//   data['timeline'] = timeline!.toJson();
+// }
+// return data;
+//   }
 }
 
 class Timeline {
-  int? i61722;
+  int? date;
 
   Timeline({
-    this.i61722,
+    this.date,
   });
 
   Timeline.fromJson(Map<String , dynamic> json) {
-    i61722 = json['6/17/22'];
+    date = json['6/17/22'];
   }
-  Map<String , dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic> ();
-    data['6/17/22'] = i61722;
-     return data;
+  // Map<String , dynamic> toJson() {
+  //   final Map<String, dynamic> data = Map<String, dynamic> ();
+  //   data['6/17/22'] = date;
+  //    return data;
 
-  }
+  // }
  
 
 

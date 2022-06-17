@@ -1,8 +1,7 @@
 import 'package:covid_api/provider/covid_provider.dart';
 import 'package:covid_api/views/views.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:provider/provider.dart';
 
 class CovidPage extends StatefulWidget {
@@ -24,7 +23,8 @@ class _CovidPageState extends State<CovidPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Covid Details"),
+        centerTitle: true,
+        title:const  Text("Covid Details"),
       ),
       body: Consumer<CovidProvider>(
         builder: (context, value, child) {
@@ -32,7 +32,7 @@ class _CovidPageState extends State<CovidPage> {
             return Column(
               children: [
 Text(covidDetail[index].country ?? ""),
-Text(covidDetail[index].timeline.toString())
+Text(covidDetail[index].timeline!.date.toString())
               ],
             );
           });
